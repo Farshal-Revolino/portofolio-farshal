@@ -1,94 +1,90 @@
 import React from "react";
 
-import laravel from "../assets/devpack/laravel.svg";
-import react from "../assets/devpack/react.svg";
-
-import pnpm from "../assets/devpack/pnpm.svg";
-import npm from "../assets/devpack/npm.svg";
-
-import git from "../assets/devpack/git.svg";
-import github from "../assets/devpack/github.svg";
-
-import bootstrap from "../assets/devpack/bootstrap.svg";
-import tailwind from "../assets/devpack/tailwind.svg";
-
 const Education = () => {
   return (
-    <section className="container" id="education">
-      <h1>Skills & Education</h1>
-
-      <div className="row d-flex flex-wrap flex-column flex-md-row justify-content-between gap-3">
-        <div
-          className="col-12 col-md-5 "
-          data-aos="fade-right"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-sine"
-        >
-          <div className="card mt-2">
-            <div className="card-header">
-              <h3 className="pre-title">Learning Path</h3>
-            </div>
-            <div className="card-body">
-              <div className="d-flex">
-                <div className="line">
-                  <div></div>
-                </div>
-                <div className="education-info">
-                  <h4 className="education-title">Universitas Pamulang</h4>
-                  <p>Teknik Informatika</p>
-                  <h4 className="education-years">2022 - Sekarang</h4>
-                </div>
+    <section className="py-5" id="education">
+      <div className="container">
+        <h2 className="text-start mb-4 pj-main-title">Skills & Education</h2>
+        
+        <div className="row g-4">
+          {/* Kolom Kiri: Learning Path (Kembali minimalis seperti desain asli Anda) */}
+          <div className="col-md-6" data-aos="fade-up">
+            <div className="p-4 bg-light rounded-3 h-100 border">
+              <h4 className="border-bottom pb-3 mb-4">Learning Path</h4>
+              
+              <div className="mb-4">
+                <h5 className="mb-1">Universitas Pamulang</h5>
+                <p className="text-secondary mb-1">Teknik Informatika</p>
+                <p className="text-muted small mb-0">2022 - Sekarang</p>
               </div>
-              <div className="d-flex">
-                <div className="line">
-                  <div></div>
-                </div>
-                <div className="education-info py-4">
-                  <h4 className="education-title">SMK Nusantara 01 Ciputat</h4>
-                  <p>Rekayasa Perangkat Lunak</p>
-                  <h4 className="education-years">2019 - 2022</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="col-12 col-md-5"
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-sine"
-        >
-          <div className="card d-flex gap-1">
-            <div className="card-header">
-              <h3> Skills</h3>
-            </div>
-            <div className="card-body d-flex">
+              
               <div>
-                <h5>Frameworks</h5>
-                <div className="d-flex gap-3">
-                  <img src={laravel} alt="" width={40} className="item" />
-                  <img src={react} alt="" width={40} className="item" />
-                </div>
-                <h5 className="mt-3">UI Frameworks</h5>
-                <div className="d-flex gap-3">
-                  <img src={tailwind} alt="" width={40} className="item" />
-                  <img src={bootstrap} alt="" width={40} className="item" />
-                </div>
-                <h5 className="mt-3">Package Manager</h5>
-                <div className="d-flex gap-3">
-                  <img src={pnpm} alt="" width={40} className="item" />
-                  <img src={npm} alt="" width={40} className="item" />
-                </div>
-              </div>
-              <div className="px-3">
-                <h5 className="text-wrap">Versions Control System</h5>
-                <div className="d-flex gap-2">
-                  <img src={git} alt="" width={40} />
-                  <img src={github} alt="" width={40} />
-                </div>
+                <h5 className="mb-1">SMK Islamiyah Ciputat</h5>
+                <p className="text-secondary mb-1">Teknik Informatika</p>
+                <p className="text-muted small mb-0">2019 - 2022</p>
               </div>
             </div>
           </div>
+
+          {/* Kolom Kanan: Skills (Menggunakan Grid Kotak dengan Ikon Asli) */}
+          <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div className="p-4 bg-light rounded-3 h-100 border">
+              <h4 className="border-bottom pb-3 mb-4">Skills</h4>
+              
+              <div className="row text-center g-3">
+                
+                {/* Skill: React */}
+                <div className="col-4 col-sm-4 col-md-4">
+                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" width="45" height="45" className="mb-2"/>
+                    <div className="small fw-semibold text-secondary">React.js</div>
+                  </div>
+                </div>
+
+                {/* Skill: Laravel */}
+                <div className="col-4 col-sm-4 col-md-4">
+                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" width="45" height="45" className="mb-2"/>
+                    <div className="small fw-semibold text-secondary">Laravel</div>
+                  </div>
+                </div>
+
+                {/* Skill: Bootstrap */}
+                <div className="col-4 col-sm-4 col-md-4">
+                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="45" height="45" className="mb-2"/>
+                    <div className="small fw-semibold text-secondary">Bootstrap</div>
+                  </div>
+                </div>
+
+                {/* Skill: Git */}
+                <div className="col-4 col-sm-4 col-md-4">
+                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" width="45" height="45" className="mb-2"/>
+                    <div className="small fw-semibold text-secondary">Git</div>
+                  </div>
+                </div>
+
+                {/* Skill: GitHub */}
+                <div className="col-4 col-sm-4 col-md-4">
+                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" width="45" height="45" className="mb-2"/>
+                    <div className="small fw-semibold text-secondary">GitHub</div>
+                  </div>
+                </div>
+
+                {/* Skill: NPM */}
+                <div className="col-4 col-sm-4 col-md-4">
+                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" alt="NPM" width="45" height="45" className="mb-2"/>
+                    <div className="small fw-semibold text-secondary">NPM</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
