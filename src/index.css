@@ -1,0 +1,85 @@
+/* ========================================= */
+/* GLOBAL NEO-BRUTALISM STYLES               */
+/* ========================================= */
+
+/* Warna latar belakang utama (Beige) */
+body {
+  background-color: #f4f0e6 !important;
+  color: #000 !important;
+  font-family: 'Quicksand', system-ui, sans-serif !important;
+}
+
+/* Garis pembatas tebal */
+.neo-divider {
+  border-bottom: 4px solid #000;
+  margin-bottom: 2rem;
+}
+
+/* Gaya Kartu Neo-Brutalism */
+.neo-card {
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 0 !important;
+  box-shadow: 6px 6px 0px #000;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efek saat kartu disentuh (hover) */
+.neo-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px #000;
+}
+
+/* Aksen Badge/Label kecil */
+.neo-badge {
+  background-color: #d4ff32;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* ========================================= */
+/* GAYA TOMBOL NEO-BRUTALISM (INTERAKTIF)    */
+/* ========================================= */
+
+.neo-btn {
+  background-color: #fff;
+  border: 3px solid #000;
+  color: #000;
+  font-weight: 900;
+  border-radius: 0 !important;
+  box-shadow: 5px 5px 0px #000;
+  text-transform: uppercase;
+  transition: all 0.15s ease-out;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Jarak teks dengan ikon */
+}
+
+/* Efek saat kursor menyentuh tombol (Hover) - Terangkat */
+.neo-btn:hover {
+  background-color: #d4ff32;
+  box-shadow: 8px 8px 0px #000;
+  transform: translate(-3px, -3px);
+  color: #000;
+}
+
+/* EFEK KLIK (Active) - Tombol tertekan masuk ke dalam */
+.neo-btn:active {
+  box-shadow: 0px 0px 0px #000 !important;
+  transform: translate(5px, 5px) !important;
+}
+
+/* Animasi khusus ikon panah */
+.neo-btn i.gerak {
+  transition: transform 0.2s ease-in-out;
+}
+.neo-btn:hover i.gerak {
+  transform: translateX(6px); /* Panah maju saat di-hover */
+}

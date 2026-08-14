@@ -1,61 +1,80 @@
 import React from "react";
-// Pastikan nama file gambar ini sudah sesuai dengan yang ada di folder assets Anda
+// Pastikan path gambar Anda sudah benar
 import imgSpkWaseco from "../assets/spk-waseco.png";
 import imgLinoFarm from "../assets/lino-farm.png";
 
-function Portfolio() {
+const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "SPK Waseco",
+      title: "SPK WASECO",
+      badge: "WEB APP",
       description:
-        "A Decision Support System (SPK) developed for Waseco utilizing the Profile Matching method. This application evaluates alternatives by comparing them against ideal criteria, providing objective and accurate recommendations for decision-making.",
+        "A Decision Support System (SPK) developed for Waseco utilizing the Profile Matching method. Evaluates alternatives by comparing them against ideal criteria.",
       imageUrl: imgSpkWaseco,
       link: "https://github.com/Farshal-Revolino/spk-waseco",
-      animation: "fade-right",
     },
     {
       id: 2,
-      title: "Lino Farm",
+      title: "LINO FARM",
+      badge: "E-COMMERCE",
       description:
-        "A professional company profile website for Lino Farm. This project showcases the farm's services, high-quality products, and operational values through an attractive and responsive design.",
+        "A professional company profile website for Lino Farm. Showcases the farm's services, high-quality products, and operational values.",
       imageUrl: imgLinoFarm,
       link: "https://github.com/Farshal-Revolino/lino_farm",
-      animation: "fade-left",
     },
   ];
 
   return (
     <section className="portfolio-section py-5 mt-5" id="portfolio">
       <div className="container">
-        <h2 className="text-start mb-4 pj-main-title">My Projects</h2>
-        <div className="row">
+        
+        <div className="neo-divider pb-4">
+          <div className="neo-badge">MY WORK</div>
+          <h1 className="text-start fw-bolder mb-2 text-uppercase" style={{ letterSpacing: "-1px", fontSize: "3rem" }}>
+            My Projects
+          </h1>
+          <p className="text-dark fw-bold">Berikut adalah hasil eksplorasi dan pengembangan sistem yang telah saya buat.</p>
+        </div>
+
+        <div className="row g-4">
           {projects.map((project) => (
-            <div
-              key={project.id}
-              className="col-md-6 mb-4" // col-md-6 agar 2 proyek ini mengisi layar dengan proporsional
-              data-aos={project.animation}
-              data-aos-duration="500"
-              data-aos-easing="ease-in-sine"
-            >
-              <div className="card h-100"> {/* h-100 membuat tinggi kartu sejajar */}
+            <div key={project.id} className="col-md-6">
+              <div className="card h-100 neo-card p-4">
+                
+                {/* Bagian Gambar Proyek yang Sudah Dikotakin */}
                 <img
                   src={project.imageUrl}
-                  className="card-img-top"
+                  className="card-img-top mb-4"
                   alt={project.title}
+                  style={{ 
+                    borderRadius: 0, 
+                    border: "4px solid #000", 
+                    boxShadow: "6px 6px 0px #000",
+                    backgroundColor: "#fff",
+                    padding: "0.5rem" 
+                  }}
                 />
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title">{project.title}</h5>
-                  <p className="card-text flex-grow-1">{project.description}</p>
+                
+                <div className="card-body p-0 d-flex flex-column">
+                  <div className="d-flex align-items-center mb-3 gap-2">
+                    <span className="neo-badge mb-0">{project.badge}</span>
+                    <h4 className="card-title fw-bolder mb-0">{project.title}</h4>
+                  </div>
                   
-                  <div className="mt-auto">
+                  <p className="card-text flex-grow-1 fw-bold">
+                    {project.description}
+                  </p>
+                  
+                  <div className="mt-4">
+                    {/* Tombol Interaktif dengan Ikon Panah */}
                     <a 
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="btn pj-btn"
+                      className="btn neo-btn w-100 py-2 fs-5"
                     >
-                      View Project
+                      LIHAT PROYEK <i className="bi bi-arrow-right gerak fw-bolder"></i>
                     </a>
                   </div>
                 </div>
@@ -63,9 +82,10 @@ function Portfolio() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
-}
+};
 
-export default Portfolio;
+export default Projects;

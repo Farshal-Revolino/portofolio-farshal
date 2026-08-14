@@ -1,86 +1,77 @@
 import React from "react";
 
 const Education = () => {
+  // Daftar skill sudah diperbarui (Tailwind, Git, Bootstrap dihapus -> MySQL, Golang, Java ditambahkan)
+  const skills = [
+    { name: "React", img: "react/react-original.svg" },
+    { name: "Laravel", img: "laravel/laravel-original.svg" },
+    { name: "MySQL", img: "mysql/mysql-original.svg" },
+    { name: "Golang", img: "go/go-original.svg" },
+    { name: "Java", img: "java/java-original.svg" },
+    { name: "GitHub", img: "github/github-original.svg" }
+  ];
+
   return (
     <section className="py-5" id="education">
-      <div className="container">
-        <h2 className="text-start mb-4 pj-main-title">Skills & Education</h2>
+      <div className="container my-5">
+        
+        <div className="neo-divider pb-4 mb-5">
+          <div className="neo-badge">KUALIFIKASI</div>
+          <h2 className="text-start fw-bolder mb-2 text-uppercase" style={{ letterSpacing: "-1px", fontSize: "2.5rem", color: "#000" }}>
+            Skills & Education
+          </h2>
+        </div>
         
         <div className="row g-4">
-          {/* Kolom Kiri: Learning Path (Kembali minimalis seperti desain asli Anda) */}
+          {/* Kolom Kiri: Learning Path */}
           <div className="col-md-6" data-aos="fade-up">
-            <div className="p-4 bg-light rounded-3 h-100 border">
-              <h4 className="border-bottom pb-3 mb-4">Learning Path</h4>
+            <div className="neo-card p-4 h-100" style={{ backgroundColor: "#f4f0e6" }}>
+              <h4 className="fw-bolder border-bottom border-dark border-3 pb-3 mb-4 text-uppercase">
+                Learning Path
+              </h4>
               
-              <div className="mb-4">
-                <h5 className="mb-1">Universitas Pamulang</h5>
-                <p className="text-secondary mb-1">Teknik Informatika</p>
-                <p className="text-muted small mb-0">2022 - Sekarang</p>
+              {/* Kotak Universitas */}
+              <div className="p-3 mb-4 border border-3 border-dark bg-white" style={{ boxShadow: "4px 4px 0px #000" }}>
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                   <h5 className="fw-bolder mb-0 text-uppercase">Universitas Pamulang</h5>
+                   <span className="neo-badge mb-0" style={{ backgroundColor: "#d4ff32", fontSize: "11px" }}>2022 - 2026</span>
+                </div>
+                <p className="fw-bold mb-0">Teknik Informatika</p>
               </div>
               
-              <div>
-                <h5 className="mb-1">SMK Islamiyah Ciputat</h5>
-                <p className="text-secondary mb-1">Teknik Informatika</p>
-                <p className="text-muted small mb-0">2019 - 2022</p>
+              {/* Kotak SMK */}
+              <div className="p-3 border border-3 border-dark bg-white" style={{ boxShadow: "4px 4px 0px #000" }}>
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                   <h5 className="fw-bolder mb-0 text-uppercase">SMK Islamiyah Ciputat</h5>
+                   <span className="neo-badge mb-0" style={{ backgroundColor: "#d4ff32", fontSize: "11px" }}>2019 - 2022</span>
+                </div>
+                <p className="fw-bold mb-0">Teknik Komputer Jaringan</p>
               </div>
             </div>
           </div>
 
-          {/* Kolom Kanan: Skills (Menggunakan Grid Kotak dengan Ikon Asli) */}
+          {/* Kolom Kanan: Skills Grid */}
           <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div className="p-4 bg-light rounded-3 h-100 border">
-              <h4 className="border-bottom pb-3 mb-4">Skills</h4>
+            <div className="neo-card p-4 h-100" style={{ backgroundColor: "#f4f0e6" }}>
+              <h4 className="fw-bolder border-bottom border-dark border-3 pb-3 mb-4 text-uppercase">
+                Tech Stack
+              </h4>
               
               <div className="row text-center g-3">
-                
-                {/* Skill: React */}
-                <div className="col-4 col-sm-4 col-md-4">
-                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" width="45" height="45" className="mb-2"/>
-                    <div className="small fw-semibold text-secondary">React.js</div>
-                  </div>
-                </div>
-
-                {/* Skill: Laravel */}
-                <div className="col-4 col-sm-4 col-md-4">
-                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" width="45" height="45" className="mb-2"/>
-                    <div className="small fw-semibold text-secondary">Laravel</div>
-                  </div>
-                </div>
-
-                {/* Skill: Bootstrap */}
-                <div className="col-4 col-sm-4 col-md-4">
-                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="45" height="45" className="mb-2"/>
-                    <div className="small fw-semibold text-secondary">Bootstrap</div>
-                  </div>
-                </div>
-
-                {/* Skill: Git */}
-                <div className="col-4 col-sm-4 col-md-4">
-                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" width="45" height="45" className="mb-2"/>
-                    <div className="small fw-semibold text-secondary">Git</div>
-                  </div>
-                </div>
-
-                {/* Skill: GitHub */}
-                <div className="col-4 col-sm-4 col-md-4">
-                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" width="45" height="45" className="mb-2"/>
-                    <div className="small fw-semibold text-secondary">GitHub</div>
-                  </div>
-                </div>
-
-                {/* Skill: NPM */}
-                <div className="col-4 col-sm-4 col-md-4">
-                  <div className="p-3 bg-white shadow-sm rounded border h-100 d-flex flex-column align-items-center justify-content-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" alt="NPM" width="45" height="45" className="mb-2"/>
-                    <div className="small fw-semibold text-secondary">NPM</div>
-                  </div>
-                </div>
-
+                {skills.map((skill, index) => (
+                   <div className="col-4 col-sm-4" key={index}>
+                     <div 
+                       className="p-3 border border-dark border-3 d-flex flex-column align-items-center justify-content-center h-100 bg-white" 
+                       style={{ boxShadow: "4px 4px 0px #000", transition: "transform 0.2s" }}
+                       onMouseEnter={(e) => e.currentTarget.style.transform = "translate(-2px, -2px)"}
+                       onMouseLeave={(e) => e.currentTarget.style.transform = "translate(0, 0)"}
+                     >
+                        {/* Logo dari Devicon */}
+                        <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.img}`} alt={skill.name} width="40" height="40" className="mb-2"/>
+                        <div className="small fw-bolder text-uppercase">{skill.name}</div>
+                     </div>
+                   </div>
+                ))}
               </div>
             </div>
           </div>
