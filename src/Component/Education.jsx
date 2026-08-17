@@ -1,7 +1,6 @@
 import React from "react";
 
 const Education = () => {
-  // Daftar skill sudah diperbarui (Tailwind, Git, Bootstrap dihapus -> MySQL, Golang, Java ditambahkan)
   const skills = [
     { name: "React", img: "react/react-original.svg" },
     { name: "Laravel", img: "laravel/laravel-original.svg" },
@@ -15,9 +14,9 @@ const Education = () => {
     <section className="py-5" id="education">
       <div className="container my-5">
         
-        <div className="neo-divider pb-4 mb-5">
-          <div className="neo-badge">KUALIFIKASI</div>
-          <h2 className="text-start fw-bolder mb-2 text-uppercase" style={{ letterSpacing: "-1px", fontSize: "2.5rem", color: "#000" }}>
+        <div className="elegant-divider pb-4 mb-5">
+          <div className="elegant-badge">QUALIFICATIONS</div>
+          <h2 className="text-start mb-2" style={{ fontSize: "2.5rem", fontWeight: "800", color: "#f8fafc" }}>
             Skills & Education
           </h2>
         </div>
@@ -25,35 +24,43 @@ const Education = () => {
         <div className="row g-4">
           {/* Kolom Kiri: Learning Path */}
           <div className="col-md-6" data-aos="fade-up">
-            <div className="neo-card p-4 h-100" style={{ backgroundColor: "#f4f0e6" }}>
-              <h4 className="fw-bolder border-bottom border-dark border-3 pb-3 mb-4 text-uppercase">
+            <div className="elegant-card p-4 h-100" style={{ backgroundColor: "rgba(30, 41, 59, 0.7)" }}>
+              <h4 className="fw-bolder border-bottom pb-3 mb-4 text-uppercase" style={{ borderColor: "rgba(255,255,255,0.1) !important", color: "#f8fafc" }}>
                 Learning Path
               </h4>
               
               {/* Kotak Universitas */}
-              <div className="p-3 mb-4 border border-3 border-dark bg-white" style={{ boxShadow: "4px 4px 0px #000" }}>
+              <div className="p-4 mb-4" style={{ 
+                backgroundColor: "rgba(255,255,255,0.03)", 
+                borderRadius: "12px",
+                border: "1px solid rgba(255,255,255,0.05)"
+              }}>
                 <div className="d-flex justify-content-between align-items-center mb-2">
-                   <h5 className="fw-bolder mb-0 text-uppercase">Universitas Pamulang</h5>
-                   <span className="neo-badge mb-0" style={{ backgroundColor: "#d4ff32", fontSize: "11px" }}>2022 - 2026</span>
+                   <h5 className="fw-bolder mb-0 text-uppercase" style={{ color: "#38bdf8", fontSize: "1.1rem" }}>Universitas Pamulang</h5>
+                   <span className="elegant-badge mb-0" style={{ fontSize: "11px", padding: "0.2rem 0.5rem" }}>2022 - 2026</span>
                 </div>
-                <p className="fw-bold mb-0">Teknik Informatika</p>
+                <p className="fw-bold mb-0 text-muted">Teknik Informatika</p>
               </div>
               
               {/* Kotak SMK */}
-              <div className="p-3 border border-3 border-dark bg-white" style={{ boxShadow: "4px 4px 0px #000" }}>
+              <div className="p-4" style={{ 
+                backgroundColor: "rgba(255,255,255,0.03)", 
+                borderRadius: "12px",
+                border: "1px solid rgba(255,255,255,0.05)"
+              }}>
                 <div className="d-flex justify-content-between align-items-center mb-2">
-                   <h5 className="fw-bolder mb-0 text-uppercase">SMK Islamiyah Ciputat</h5>
-                   <span className="neo-badge mb-0" style={{ backgroundColor: "#d4ff32", fontSize: "11px" }}>2019 - 2022</span>
+                   <h5 className="fw-bolder mb-0 text-uppercase" style={{ color: "#38bdf8", fontSize: "1.1rem" }}>SMK Islamiyah Ciputat</h5>
+                   <span className="elegant-badge mb-0" style={{ fontSize: "11px", padding: "0.2rem 0.5rem" }}>2019 - 2022</span>
                 </div>
-                <p className="fw-bold mb-0">Teknik Komputer Jaringan</p>
+                <p className="fw-bold mb-0 text-muted">Teknik Komputer Jaringan</p>
               </div>
             </div>
           </div>
 
           {/* Kolom Kanan: Skills Grid */}
           <div className="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div className="neo-card p-4 h-100" style={{ backgroundColor: "#f4f0e6" }}>
-              <h4 className="fw-bolder border-bottom border-dark border-3 pb-3 mb-4 text-uppercase">
+            <div className="elegant-card p-4 h-100" style={{ backgroundColor: "rgba(30, 41, 59, 0.7)" }}>
+              <h4 className="fw-bolder border-bottom pb-3 mb-4 text-uppercase" style={{ borderColor: "rgba(255,255,255,0.1) !important", color: "#f8fafc" }}>
                 Tech Stack
               </h4>
               
@@ -61,14 +68,24 @@ const Education = () => {
                 {skills.map((skill, index) => (
                    <div className="col-4 col-sm-4" key={index}>
                      <div 
-                       className="p-3 border border-dark border-3 d-flex flex-column align-items-center justify-content-center h-100 bg-white" 
-                       style={{ boxShadow: "4px 4px 0px #000", transition: "transform 0.2s" }}
-                       onMouseEnter={(e) => e.currentTarget.style.transform = "translate(-2px, -2px)"}
-                       onMouseLeave={(e) => e.currentTarget.style.transform = "translate(0, 0)"}
+                       className="p-3 d-flex flex-column align-items-center justify-content-center h-100" 
+                       style={{ 
+                         backgroundColor: "rgba(255,255,255,0.03)", 
+                         borderRadius: "12px",
+                         border: "1px solid rgba(255,255,255,0.05)",
+                         transition: "all 0.3s ease" 
+                       }}
+                       onMouseEnter={(e) => {
+                         e.currentTarget.style.transform = "translateY(-5px)";
+                         e.currentTarget.style.borderColor = "rgba(56, 189, 248, 0.3)";
+                       }}
+                       onMouseLeave={(e) => {
+                         e.currentTarget.style.transform = "translateY(0)";
+                         e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)";
+                       }}
                      >
-                        {/* Logo dari Devicon */}
-                        <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.img}`} alt={skill.name} width="40" height="40" className="mb-2"/>
-                        <div className="small fw-bolder text-uppercase">{skill.name}</div>
+                        <img src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.img}`} alt={skill.name} width="40" height="40" className="mb-3"/>
+                        <div className="small fw-bolder text-uppercase" style={{ color: "#e2e8f0" }}>{skill.name}</div>
                      </div>
                    </div>
                 ))}

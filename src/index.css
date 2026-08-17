@@ -1,60 +1,69 @@
 /* ========================================= */
-/* GLOBAL NEO-BRUTALISM STYLES               */
+/* GLOBAL DARK THEME STYLES                  */
 /* ========================================= */
 
-/* Warna latar belakang utama (Beige) */
 body {
-  background-color: #f4f0e6 !important;
-  color: #000 !important;
+  background-color: #0f172a !important; /* Slate 900 */
+  color: #f8fafc !important; /* Slate 50 */
   font-family: 'Quicksand', system-ui, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Garis pembatas tebal */
-.neo-divider {
-  border-bottom: 4px solid #000;
+/* Garis pembatas elegan */
+.elegant-divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 2rem;
 }
 
-/* Gaya Kartu Neo-Brutalism */
-.neo-card {
-  background-color: #fff;
-  border: 3px solid #000;
-  border-radius: 0 !important;
-  box-shadow: 6px 6px 0px #000;
-  transition: all 0.2s ease-in-out;
+/* Gaya Kartu Modern */
+.elegant-card {
+  background-color: #1e293b; /* Slate 800 */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 /* Efek saat kartu disentuh (hover) */
-.neo-card:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 10px 10px 0px #000;
+.elegant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: rgba(56, 189, 248, 0.3); /* Subtle blue glow on border */
 }
 
 /* Aksen Badge/Label kecil */
-.neo-badge {
-  background-color: #d4ff32;
-  border: 2px solid #000;
-  color: #000;
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
+.elegant-badge {
+  background-color: rgba(56, 189, 248, 0.1); /* Light blue background */
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: #38bdf8; /* Sky 400 */
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
+  border-radius: 9999px; /* Pill shape */
   display: inline-block;
   margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 }
 
 /* ========================================= */
-/* GAYA TOMBOL NEO-BRUTALISM (INTERAKTIF)    */
+/* GAYA TOMBOL MODERN (INTERAKTIF)           */
 /* ========================================= */
 
-.neo-btn {
-  background-color: #fff;
-  border: 3px solid #000;
-  color: #000;
-  font-weight: 900;
-  border-radius: 0 !important;
-  box-shadow: 5px 5px 0px #000;
+.elegant-btn {
+  background-color: #38bdf8; /* Sky 400 */
+  border: none;
+  color: #0f172a; /* Slate 900 */
+  font-weight: 700;
+  border-radius: 8px !important;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.2);
   text-transform: uppercase;
-  transition: all 0.15s ease-out;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-in-out;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -63,23 +72,47 @@ body {
 }
 
 /* Efek saat kursor menyentuh tombol (Hover) - Terangkat */
-.neo-btn:hover {
-  background-color: #d4ff32;
-  box-shadow: 8px 8px 0px #000;
-  transform: translate(-3px, -3px);
-  color: #000;
+.elegant-btn:hover {
+  background-color: #7dd3fc; /* Sky 300 */
+  box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+  color: #0f172a;
 }
 
-/* EFEK KLIK (Active) - Tombol tertekan masuk ke dalam */
-.neo-btn:active {
-  box-shadow: 0px 0px 0px #000 !important;
-  transform: translate(5px, 5px) !important;
+.elegant-btn-outline {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8fafc;
+  font-weight: 700;
+  border-radius: 8px !important;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.elegant-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* EFEK KLIK (Active) */
+.elegant-btn:active, .elegant-btn-outline:active {
+  transform: translateY(1px) !important;
+  box-shadow: none !important;
 }
 
 /* Animasi khusus ikon panah */
-.neo-btn i.gerak {
+.elegant-btn i.gerak, .elegant-btn-outline i.gerak {
   transition: transform 0.2s ease-in-out;
 }
-.neo-btn:hover i.gerak {
-  transform: translateX(6px); /* Panah maju saat di-hover */
+.elegant-btn:hover i.gerak, .elegant-btn-outline:hover i.gerak {
+  transform: translateX(4px); /* Panah maju saat di-hover */
 }

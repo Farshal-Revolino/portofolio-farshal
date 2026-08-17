@@ -12,25 +12,32 @@ const Header = () => {
   return (
     <nav 
       className="navbar navbar-expand-lg sticky-top py-3" 
-      style={{ backgroundColor: "#f4f0e6", borderBottom: "3px solid #000" }}
+      style={{ 
+        backgroundColor: "rgba(15, 23, 42, 0.8)", 
+        backdropFilter: "blur(10px)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.05)" 
+      }}
     >
       <div className="container">
-        {/* Logo bergaya Neo-Brutalism */}
+        {/* Logo bergaya Modern */}
         <a 
-          className="navbar-brand text-uppercase d-flex align-items-center gap-2" 
+          className="navbar-brand d-flex align-items-center gap-2" 
           href="#aboutme"
           onClick={(e) => handleScroll(e, "aboutme")}
-          style={{ fontWeight: "900", letterSpacing: "-1px", color: "#000" }}
+          style={{ fontWeight: "800", letterSpacing: "-0.5px", color: "#f8fafc" }}
         >
-          <span style={{ backgroundColor: "#d4ff32", padding: "0.2rem 0.5rem", border: "2px solid #000" }}>
+          <span style={{ 
+            backgroundColor: "#38bdf8", 
+            color: "#0f172a",
+            padding: "0.25rem 0.6rem", 
+            borderRadius: "6px",
+            fontWeight: "900"
+          }}>
             FR
           </span>
-          Farshal Revolino
+          <span style={{ fontSize: "1.2rem" }}>Farshal Revolino</span>
         </a>
         
-        {/* ======================================================== */}
-        {/* TAMBAHAN d-lg-none AGAR HILANG DI DESKTOP                  */}
-        {/* ======================================================== */}
         <button
           className="navbar-toggler d-flex d-lg-none justify-content-center align-items-center"
           type="button"
@@ -40,16 +47,14 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
           style={{ 
-            border: "2px solid #000", 
-            borderRadius: "0", 
-            boxShadow: "3px 3px 0px #000",
-            backgroundColor: "#fff",
+            border: "1px solid rgba(255,255,255,0.2)", 
+            borderRadius: "8px", 
+            backgroundColor: "transparent",
             width: "45px",
             height: "45px",
             padding: "0"
           }}
         >
-          {/* Menggunakan SVG agar garis pasti dirender */}
           <svg 
             width="24" 
             height="24" 
@@ -57,39 +62,37 @@ const Header = () => {
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M3 6H21" stroke="black" strokeWidth="3" strokeLinecap="square"/>
-            <path d="M3 12H21" stroke="black" strokeWidth="3" strokeLinecap="square"/>
-            <path d="M3 18H21" stroke="black" strokeWidth="3" strokeLinecap="square"/>
+            <path d="M3 6H21" stroke="#f8fafc" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M3 12H21" stroke="#f8fafc" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M3 18H21" stroke="#f8fafc" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         </button>
-        {/* ======================================================== */}
         
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav gap-3 align-items-center mt-3 mt-lg-0">
             <li className="nav-item">
-              <a className="nav-link fw-bold text-dark text-uppercase" href="#aboutme" onClick={(e) => handleScroll(e, "aboutme")}>
+              <a className="nav-link fw-bold" style={{ color: "#e2e8f0" }} href="#aboutme" onClick={(e) => handleScroll(e, "aboutme")}>
                 About Me
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-bold text-dark text-uppercase" href="#portfolio" onClick={(e) => handleScroll(e, "portfolio")}>
+              <a className="nav-link fw-bold" style={{ color: "#e2e8f0" }} href="#portfolio" onClick={(e) => handleScroll(e, "portfolio")}>
                 Projects
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fw-bold text-dark text-uppercase" href="#education" onClick={(e) => handleScroll(e, "education")}>
+              <a className="nav-link fw-bold" style={{ color: "#e2e8f0" }} href="#education" onClick={(e) => handleScroll(e, "education")}>
                 Education
               </a>
             </li>
             
-            {/* Tombol Contact bergaya tebal */}
             <li className="nav-item ms-lg-3">
               <a 
-                className="btn neo-btn fw-bolder" 
+                className="btn elegant-btn" 
                 href="#footer"
                 onClick={(e) => handleScroll(e, "footer")}
               >
-                CONTACT ME
+                Contact Me
               </a>
             </li>
           </ul>

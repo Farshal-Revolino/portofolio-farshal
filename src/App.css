@@ -3,120 +3,109 @@
 }
 .navbar-brand {
   font-weight: 700;
-
   font-size: 24px;
 }
 
 .nav-link {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
 }
 
 /* hero */
 .Hero {
-  margin-top: 100px;
+  margin-top: 80px;
   min-height: 500px;
-  background-color: red;
 }
 .hero-intro-text {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
-  color: grey;
+  color: #94a3b8; /* Slate 400 */
 }
 .hero-name-text {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 40px;
+  color: #f8fafc;
 }
 .lead {
-  font-weight: 600;
-  color: grey;
+  font-weight: 500;
+  color: #94a3b8;
 }
 
 .heroImg {
-  width: 400px;
-  filter: drop-shadow(4px 4px 4px #9999);
+  width: 320px;
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
-.hero-btn{
-  font-weight: 700;
-  color: rgb(186, 181, 181);
+
+.heroImg:hover {
+  transform: translateY(-5px);
 }
+
 @media (max-width: 500px) {
-  .col-reverse{
+  .col-reverse {
     flex-direction: column-reverse !important;
     margin-top: 0px !important;
   }
-  .heroImg{
+  .heroImg {
     width: 280px;
   }
 }
 
-.cta-btn {
-  border-radius: 2rem;
-}
-.cta-btn:hover {
-  transform: scale(1);
-  background-color: white;
-  color: black;
+/* project */
+.card {
+  height: 100%;
+  background-color: #1e293b !important; /* Slate 800 */
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease;
 }
 
-/* project */
-.card{
-  height: 410px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  border-color: rgba(56, 189, 248, 0.3) !important;
 }
+
 .min-height-card {
   min-height: 410px;
 }
-.pj-btn {
-  margin-top: auto;
-  border-radius: 10px;
-  background-color: black;
-  font-weight: 600;
-  color: whitesmoke;
-  border: solid 1px black;
-}
-.pj-btn:hover {
-  color: black;
-  background-color: whitesmoke;
-}
+
 .card-title {
-  font-weight: 600;
+  font-weight: 700;
+  color: #f8fafc;
 }
 .card-text {
-  font-weight: 600;
-  color: grey;
+  font-weight: 500;
+  color: #94a3b8;
+  font-size: 0.9rem;
 }
 .pj-main-title {
-  font-weight: 600;
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.5px;
 }
 
-
 /* education */
-
-
- .line {
+.line {
   padding: 0 0.7rem;
 }
 
 /* reposnsive education */
-
-
 .line div {
   width: 2px;
   height: 100%;
-  background: #dedfe4;
+  background: rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
 /* footer */
 .footer-social {
-  color: white;
+  color: #94a3b8;
+  transition: color 0.2s ease;
 }
 
-@media (max-width: 990px) {
-  
-
- 
+.footer-social:hover {
+  color: #38bdf8;
 }
-
-
-
