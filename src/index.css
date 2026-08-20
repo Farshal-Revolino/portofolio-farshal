@@ -116,3 +116,24 @@ body {
 .elegant-btn:hover i.gerak, .elegant-btn-outline:hover i.gerak {
   transform: translateX(4px); /* Panah maju saat di-hover */
 }
+
+/* ========================================= */
+/* PROJECT CARDS - CONSISTENT IMAGE STYLE    */
+/* ========================================= */
+
+/* Wrapper kotak gambar — semua card pakai ini */
+.project-img-box {
+  overflow: hidden;
+  border-radius: 10px;
+  background: #0d1117;
+  height: 220px;
+}
+
+/* Gambar itu sendiri — semua card pakai ini */
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
