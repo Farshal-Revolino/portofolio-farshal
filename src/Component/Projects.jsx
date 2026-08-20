@@ -39,7 +39,7 @@ const Projects = () => {
       title: "PMK DETECT",
       badge: "MOBILE APP",
       description:
-        "A computer vision-based mobile application for detecting signs of Foot-and-Mouth Disease (FMD) in cattle. It utilizes a deep learning model to identify FMD symptoms in real-time via the camera, helping farmers detect the disease early with high accuracy."
+        "A computer vision-based mobile application for detecting signs of Foot-and-Mouth Disease (FMD) in cattle. It utilizes a deep learning model to identify FMD symptoms in real-time via the camera, helping farmers detect the disease early with high accuracy.",
       imageUrl: imgPmk,
       imageUrlSecondary: imgPmkLogin,
       link: "https://github.com/Farshal-Revolino",
